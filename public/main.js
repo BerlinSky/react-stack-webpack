@@ -20595,7 +20595,7 @@
 			var _this = _possibleConstructorReturn(this, Object.getPrototypeOf(App).call(this));
 	
 			_this.state = {
-				message: ['Hi there, How silly is it?', 'I do not think so, do you?']
+				message: ['Hi there, How silly is it?', 'I do not think so, do you?', 'There are too many questions.']
 			};
 			return _this;
 		}

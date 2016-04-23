@@ -6,7 +6,8 @@ class App extends React.Component {
 		this.state = {
 			message: [
 				'Hi there, How silly is it?',
-				'I do not think so, do you?'
+				'I do not think so, do you?',
+				'There are too many questions.'
 			]
 		};
 	}
