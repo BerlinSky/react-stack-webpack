@@ -77,28 +77,18 @@
 	
 	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 	
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } // import React from 'react';
-	// import {render} from 'react-dom';
-	// import App from './components/App.jsx';
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 	
-	// React.render(<App />, document.getElementById('container'));
+	var Main = function (_React$Component) {
+	  _inherits(Main, _React$Component);
 	
-	// class App extends React.Component {
-	//   render () {
-	//     return <p> Hello React!</p>;
-	//   }
-	// }
+	  function Main() {
+	    _classCallCheck(this, Main);
 	
-	var App = function (_React$Component) {
-	  _inherits(App, _React$Component);
-	
-	  function App() {
-	    _classCallCheck(this, App);
-	
-	    return _possibleConstructorReturn(this, Object.getPrototypeOf(App).apply(this, arguments));
+	    return _possibleConstructorReturn(this, Object.getPrototypeOf(Main).apply(this, arguments));
 	  }
 	
-	  _createClass(App, [{
+	  _createClass(Main, [{
 	    key: 'render',
 	    value: function render() {
 	      return _react2.default.createElement(
@@ -114,10 +104,10 @@
 	    }
 	  }]);
 	
-	  return App;
+	  return Main;
 	}(_react2.default.Component);
 	
-	(0, _reactDom.render)(_react2.default.createElement(App, null), document.getElementById('container'));
+	(0, _reactDom.render)(_react2.default.createElement(_App2.default, null), document.getElementById('container'));
 
 /***/ },
 /* 2 */
@@ -20579,7 +20569,7 @@
 	'use strict';
 	
 	Object.defineProperty(exports, "__esModule", {
-	  value: true
+		value: true
 	});
 	
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
@@ -20596,80 +20586,43 @@
 	
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 	
-	var AwesomeComponent = function (_React$Component) {
-	  _inherits(AwesomeComponent, _React$Component);
+	var App = function (_React$Component) {
+		_inherits(App, _React$Component);
 	
-	  function AwesomeComponent(props) {
-	    _classCallCheck(this, AwesomeComponent);
+		function App() {
+			_classCallCheck(this, App);
 	
-	    var _this = _possibleConstructorReturn(this, Object.getPrototypeOf(AwesomeComponent).call(this, props));
+			var _this = _possibleConstructorReturn(this, Object.getPrototypeOf(App).call(this));
 	
-	    _this.state = { likesCount: 0 };
-	    _this.onLike = _this.onLike.bind(_this);
-	    return _this;
-	  }
+			_this.state = {
+				message: ['Hi there, How silly is it?', 'I do not think so, do you?']
+			};
+			return _this;
+		}
 	
-	  _createClass(AwesomeComponent, [{
-	    key: 'onLike',
-	    value: function onLike() {
-	      var newLikesCount = this.state.likesCount + 1;
-	      this.setState({ likesCount: newLikesCount });
-	    }
-	  }, {
-	    key: 'render',
-	    value: function render() {
-	      return _react2.default.createElement(
-	        'div',
-	        null,
-	        'Likes : ',
-	        _react2.default.createElement(
-	          'span',
-	          null,
-	          this.state.likesCount
-	        ),
-	        _react2.default.createElement(
-	          'div',
-	          null,
-	          _react2.default.createElement(
-	            'button',
-	            { onClick: this.onLike },
-	            'Like Me'
-	          )
-	        )
-	      );
-	    }
-	  }]);
+		_createClass(App, [{
+			key: 'render',
+			value: function render() {
+				var messageNodes = this.state.message.map(function (message) {
+					return _react2.default.createElement(
+						'div',
+						null,
+						message
+					);
+				});
 	
-	  return AwesomeComponent;
+				return _react2.default.createElement(
+					'div',
+					null,
+					messageNodes
+				);
+			}
+		}]);
+	
+		return App;
 	}(_react2.default.Component);
 	
-	exports.default = AwesomeComponent;
-	
-	// class App extends React.Component {
-	// 	constructor() {
-	// 		super();
-	// 		this.state = {
-	// 			message: [
-	// 				'Hi there, How silly is it?',
-	// 				'I do not think so, do you?'
-	// 			]
-	// 		};
-	// 	}
-
-	// 	render() {
-	// 		var messageNodes = this.state.message.map((message) => {
-	// 			return (
-	// 				<div>{message}</div>
-	// 			);
-	// 		});
-
-	// 		return (
-	// 			<div>{message}</div>
-	// 		);
-	// 	}
-	// };
-
-	// export default App;
+	exports.default = App;
 
 /***/ }
 /******/ ]);

@@ -1,53 +1,27 @@
 import React from 'react';
 
-class AwesomeComponent extends React.Component {
+class App extends React.Component {
+	constructor() {
+		super();
+		this.state = {
+			message: [
+				'Hi there, How silly is it?',
+				'I do not think so, do you?'
+			]
+		};
+	}
 
-  constructor(props) {
-    super(props);
-    this.state = {likesCount : 0};
-    this.onLike = this.onLike.bind(this);
-  }
+	render() {
+		var messageNodes = this.state.message.map((message) => {
+			return (
+				<div>{message}</div>
+			);
+		});
 
-  onLike () {
-    let newLikesCount = this.state.likesCount + 1;
-    this.setState({likesCount: newLikesCount});
-  }
-
-  render() {
-    return (
-      <div>
-        Likes : <span>{this.state.likesCount}</span>
-        <div><button onClick={this.onLike}>Like Me</button></div>
-      </div>
-    );
-  }
-
+		return (
+			<div>{messageNodes}</div>
+		);
+	}
 }
 
-export default AwesomeComponent;
-
-// class App extends React.Component {
-// 	constructor() {
-// 		super();
-// 		this.state = {
-// 			message: [
-// 				'Hi there, How silly is it?',
-// 				'I do not think so, do you?'
-// 			]
-// 		};
-// 	}
-
-// 	render() {
-// 		var messageNodes = this.state.message.map((message) => {
-// 			return (
-// 				<div>{message}</div>
-// 			);
-// 		});
-
-// 		return (
-// 			<div>{message}</div>
-// 		);
-// 	}
-// };
-
-// export default App;
+export default App;
