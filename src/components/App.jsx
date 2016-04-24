@@ -7,7 +7,7 @@ class App extends React.Component {
 			message: [
 				'Hi there, How silly is it?',
 				'I do not think so, do you?',
-				'How do I know?'
+				'How do I know??'
 			]
 		};
 	}
@@ -17,7 +17,7 @@ class App extends React.Component {
 
 		var messageNodes = this.state.message.map((message) => {
 			return (
-				<div>{message}</div>
+				<div style={{color: 'white'}}>{message}</div>
 			);
 		});
 
