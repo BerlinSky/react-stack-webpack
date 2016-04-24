@@ -7,12 +7,14 @@ class App extends React.Component {
 			message: [
 				'Hi there, How silly is it?',
 				'I do not think so, do you?',
-				'There are too many questions.'
+				'How do I know?'
 			]
 		};
 	}
 
 	render() {
+		// debugger;
+
 		var messageNodes = this.state.message.map((message) => {
 			return (
 				<div>{message}</div>

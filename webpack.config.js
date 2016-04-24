@@ -1,4 +1,7 @@
 module.exports = {
+	debug: true,
+  devtool: 'cheap-module-eval-source-map', 
+  noInfo: true,
 	entry: {
 		main: [
 			'./src/main.js'

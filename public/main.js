@@ -20603,6 +20603,8 @@
 		_createClass(App, [{
 			key: 'render',
 			value: function render() {
+				debugger;
+	
 				var messageNodes = this.state.message.map(function (message) {
 					return _react2.default.createElement(
 						'div',
